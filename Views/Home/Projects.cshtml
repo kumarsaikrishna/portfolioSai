@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Projects";
+    var projects = (List<Portfolio.Models.Project>)ViewData["Projects"];
+}
+
+<section class="py-20 bg-white" id="projects">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">My Projects</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                A showcase of real-world .NET applications I’ve developed to solve business challenges.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            @foreach (var project in projects)
+            {
+                <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-xl transition duration-300">
+                    <div class="mb-4 flex items-center justify-between">
+                        <h3 class="text-2xl font-semibold text-gray-900">@project.Title</h3>
+                        <i data-lucide="@project.Icon" class="w-6 h-6 text-blue-600"></i>
+                    </div>
+                    <p class="text-sm text-gray-500 mb-2 italic">@project.Category</p>
+                    <p class="text-gray-700 mb-4">@project.Description</p>
+
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">Technologies Used:</h4>
+                        <ul class="flex flex-wrap gap-2 text-sm text-white">
+                            @foreach (var tech in project.Technologies)
+                            {
+                                <li class="bg-blue-600 px-3 py-1 rounded-full">@tech</li>
+                            }
+                        </ul>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">Key Achievements:</h4>
+                        <ul class="list-disc list-inside text-gray-700 text-sm">
+                            @foreach (var item in project.Achievements)
+                            {
+                                <li>@item</li>
+                            }
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Features / Scope:</h4>
+                        <ul class="list-disc list-inside text-gray-700 text-sm">
+                            @foreach (var scope in project.TestingScope)
+                            {
+                                <li>@scope</li>
+                            }
+                        </ul>
+                    </div>
+
+                    @if (project.Confidential)
+                    {
+                        <p class="mt-4 text-sm text-yellow-600 italic">Note: Some project details are confidential.</p>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</section>

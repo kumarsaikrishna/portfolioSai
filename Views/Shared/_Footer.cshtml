@@ -1,0 +1,90 @@
+﻿<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <div class="text-2xl font-bold mb-4">
+                        <span class="text-blue-400">.NET</span> Developer
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Crafting scalable, maintainable, and secure applications using the power of .NET technologies and modern software architecture.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="mailto:kumar.dotnet@example.com"
+                           class="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors duration-200">
+                            <i class="icon" data-icon="mail"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/kumar-dotnet-developer"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors duration-200">
+                            <i class="icon" data-icon="linkedin"></i>
+                        </a>
+                        <a href="https://github.com/kumar-dotnet"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors duration-200">
+                            <i class="icon" data-icon="github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="@Url.Action("About", "Home")"
+                               class="text-gray-400 hover:text-white transition-colors duration-200">
+                                About Me
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Services", "Home")"
+                               class="text-gray-400 hover:text-white transition-colors duration-200">
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Projects", "Home")"
+                               class="text-gray-400 hover:text-white transition-colors duration-200">
+                                Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Contact", "Home")"
+                               class="text-gray-400 hover:text-white transition-colors duration-200">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>ASP.NET Core Development</li>
+                        <li>REST API Integration</li>
+                        <li>Entity Framework & SQL</li>
+                        <li>Authentication & Security</li>
+                        <li>Web App Deployment</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    © @DateTime.Now.Year .NET Developer. All rights reserved.
+                </div>
+
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+                        class="flex items-center justify-center w-10 h-10 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                    <i class="icon" data-icon="arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</footer>

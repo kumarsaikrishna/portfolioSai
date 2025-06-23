@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "About Me";
+}
+
+<section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    About Me
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A passionate .NET Developer committed to building scalable, secure, and user-centric web applications.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="prose prose-lg text-gray-600">
+                        <p class="mb-6">
+                            I'm a freelance .NET Developer with over 3 years of experience in developing enterprise-level web applications using ASP.NET MVC, .NET Core, and SQL Server.
+                            I’ve built solutions for EdTech, HRMS, and Financial platforms that streamline business operations and improve user experience.
+                        </p>
+                        <p class="mb-6">
+                            My core strength lies in backend development, API integration, database design, and modern frontend implementations using Razor, jQuery, and TailwindCSS.
+                            I follow best coding practices and maintain clean, maintainable, and testable code.
+                        </p>
+                        <p>
+                            I stay updated with the latest features in .NET ecosystem including async programming, dependency injection, Entity Framework Core, and secure authentication with JWT & Identity.
+                            My focus is always on delivering performant, user-friendly, and reliable solutions.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">Skills & Expertise</h3>
+                    <div class="space-y-6">
+                        @foreach (var skill in (List<Skill>)ViewData["Skills"])
+                        {
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-medium text-gray-700">@skill.Name</span>
+                                    <span class="text-blue-600 font-semibold">@skill.Level%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-1000 ease-out"
+                                         style="width: @(skill.Level)%">
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Key Strengths</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    @foreach (var achievement in (List<Achievement>)ViewData["Achievements"])
+                    {
+                        <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
+                            <div class="flex justify-center mb-4">
+                                <i data-lucide="@achievement.Icon" class="text-blue-600 w-6 h-6"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">
+                                @achievement.Title
+                            </h4>
+                            <p class="text-gray-600">
+                                @achievement.Description
+                            </p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

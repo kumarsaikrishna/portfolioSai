@@ -1,0 +1,41 @@
+﻿<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent"
+        id="header">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="text-2xl font-bold text-gray-900">
+                <span class="text-blue-600">.NET</span> Developer
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="@Url.Action("Index", "Home")" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">Home</a>
+                <a href="@Url.Action("About", "Home")" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">
+                    About
+                </a>
+                <a href="@Url.Action("Services", "Home")" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">
+                    Services
+                </a>
+                <a href="@Url.Action("Projects", "Home")" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">
+                    Projects
+                </a>
+                <a href="@Url.Action("Contact", "Home")" class="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">
+                    Contact
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden p-2 text-gray-700" data-mobile-menu-button>
+                <i class="icon" data-icon="menu"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden" data-mobile-menu data-open="false">
+            <a href="@Url.Action("Index", "Home")" class="block w-full text-left py-3 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">Home</a>
+            <a href="@Url.Action("About", "Home")" class="block w-full text-left py-3 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">About</a>
+            <a href="@Url.Action("Services", "Home")" class="block w-full text-left py-3 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">Services</a>
+            <a href="@Url.Action("Projects", "Home")" class="block w-full text-left py-3 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">Projects</a>
+            <a href="@Url.Action("Contact", "Home")" class="block w-full text-left py-3 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">Contact</a>
+        </div>
+    </div>
+</header>
